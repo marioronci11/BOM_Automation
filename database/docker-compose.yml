@@ -1,0 +1,21 @@
+#Instructs docker which version of it we are using 
+version: '3'
+
+#tells Docker which services to deploy, services 
+#ports default port for postgresql database
+services:
+  database:
+    image: postgres
+    ports:
+     - 5001:5432
+    volumes: 
+    - pgdata:/var/lib/postgresql/data
+    environment:
+    - POSTGRES_USER = postgres
+    - POSTGRES_PASSWORD = postgres
+    - POSTGRES_DB = postgres
+    - POSTGRES_DB = prisma
+volumes:
+  pgdata:
+
+
