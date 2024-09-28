@@ -1,5 +1,5 @@
 #Instructs docker which version of it we are using 
-version: '3'
+version: '3.12'
 
 #tells Docker which services to deploy, services 
 #ports default port for postgresql database
@@ -10,6 +10,7 @@ services:
      - 5001:5432
     volumes: 
     - pgdata:/var/lib/postgresql/data
+#Setting the environment variables and security for the database to be accessed
     environment:
     - POSTGRES_USER = postgres
     - POSTGRES_PASSWORD = postgres
