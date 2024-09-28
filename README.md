@@ -15,3 +15,4 @@ Bill the AI Agent for BIll of Materials Atomation
 - **Python:** The primary programming language for backend automation scripts.
 - **SQL:** For robust database management and integration.
 - **Docker:** Ensures cross-platform deployment and environment consistency.
+- **Flask** Has the essential components for web development, such as routing, request handling, templating, and testing
