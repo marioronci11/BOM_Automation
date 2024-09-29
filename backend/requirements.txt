@@ -1,0 +1,7 @@
+pandas
+sqlalchemy
+flask
+openpyxl
+scikit-learn
+uvicorn
+fastapi

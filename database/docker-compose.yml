@@ -12,11 +12,14 @@ services:
     - pgdata:/var/lib/postgresql/data
 #Setting the environment variables and security for the database to be accessed
     environment:
-    - POSTGRES_USER = postgres
-    - POSTGRES_PASSWORD = postgres
-    - POSTGRES_DB = postgres
-    - POSTGRES_DB = prisma
+    - POSTGRES_USER= postgres
+    - POSTGRES_PASSWORD= postgres
+    - POSTGRES_DB= postgres
+    - POSTGRES_DB= prisma
 volumes:
   pgdata:
+
+
+  
 
 
