@@ -1,0 +1,30 @@
+version: '3.10'
+
+services:
+  database:
+    image: postgres:13
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: prisma
+    ports:
+      - "5003:5432"  # Change the host port to 5002 to avoid conflict
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    restart: always
+
+  backend:
+    build:
+      context: .   # Assuming you are running this from the `backend` directory
+      dockerfile: Dockerfile
+    environment:
+      DATABASE_URL: postgresql://engineer_user:engineer_password@database:5432/prisma
+    ports:
+      - "8080:8080"  # Keep this for the FastAPI application
+    depends_on:
+      - database
+    restart: always
+
+volumes:
+  pgdata:
+

@@ -1,7 +1,7 @@
 pandas
 sqlalchemy
-flask
 openpyxl
 scikit-learn
 uvicorn
+psycopg2-binary
 fastapi
